@@ -1,0 +1,42 @@
+[
+  {
+    "id": "5",
+    "title": "American kitchen",
+    "description": "An American kitchen typically refers to a style of kitchen design that is prevalent in the United States. While specific...",
+    "img-1": "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-2": "https://images.pexels.com/photos/534151/pexels-photo-534151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-3": "https://images.pexels.com/photos/6489116/pexels-photo-6489116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "contact": "0525268280",
+    "fullDisk": "An American kitchen typically refers to a style of kitchen design that is prevalent in the United States. While specific features and designs can vary, there are some common characteristics associated with American kitchens."
+  },
+  {
+    "id": "6",
+    "title": "classic Kitchen",
+    "description": "A classic kitchen design is characterized by its enduring elegance, timeless aesthetics, and a nod to historical architectural...",
+    "img-1": "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-2": "https://images.pexels.com/photos/7195596/pexels-photo-7195596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-3": "https://images.pexels.com/photos/7195598/pexels-photo-7195598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "contact": "0525268280",
+    "fullDisk": "Style: Classic kitchens often feature custom-made cabinetry with raised-panel or recessed-panel doors, adorned with intricate molding and trim. Shaker-style cabinets are also a popular choice for their simple yet elegant design.Material: High-quality, solid wood is commonly used for cabinetry, showcasing craftsmanship and durability.Color: Neutral tones, such as whites, creams, and light grays, prevail. These colors contribute to a clean, timeless look."
+  },
+  {
+    "id": "7",
+    "title": "Old Kitchen",
+    "description": "An old kitchen evokes a sense of nostalgia and timeless charm, showcasing vintage design elements that harken...",
+    "img-1": "https://images.pexels.com/photos/1223530/pexels-photo-1223530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-2": "https://images.pexels.com/photos/175745/pexels-photo-175745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-3": "https://images.pexels.com/photos/5824493/pexels-photo-5824493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "contact": "0525268280",
+    "fullDisk": "An old kitchen evokes a sense of nostalgia and timeless charm, showcasing vintage design elements that harken back to a bygone era. Cabinets, adorned with intricate detailing and often made of warm, aged wood, exude a rustic allure. Antique hardware, with its patina and classic designs, adds character to drawers and cupboards. Retro-inspired appliances or refurbished vintage pieces bring a touch of history to the culinary space. A muted color palette, featuring soft hues like cream or pastels, contributes to the kitchen's cozy and lived-in feel. Distressed or reclaimed wood flooring, paired with natural countertops, enhances the overall rustic ambiance. Open shelving and decorative elements proudly display antique kitchenware, creating a personalized narrative within the vintage-inspired setting. Pendant lights with timeless designs illuminate the space, casting a warm glow over a kitchen that captures the enduring beauty of the past."
+  },
+  {
+    "id": "8",
+    "title": "Outdoor Kitchen",
+    "description": "An outdoor kitchen is a culinary oasis designed for al fresco dining and entertainment. Typically situated in backyard...",
+    "img-1": "https://images.pexels.com/photos/331991/pexels-photo-331991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-2": "https://media.istockphoto.com/id/171336497/photo/outdoor-kitchen-with-a-stainless-gas-grill.jpg?s=2048x2048&w=is&k=20&c=fOW3ya8pkqgDSTgcitz-iWE7xRhCD-lB_p5tFTeY1JM=",
+    "img-3": "https://media.istockphoto.com/id/1411001109/photo/mature-handsome-man-finishing-preparation-of-a-barbecue-dish-with-a-touch-of-salt-in-his.jpg?s=2048x2048&w=is&k=20&c=pT2WXbIsoXkkuW47kjql9LHFZXY-1yEwV6lo5SXUmTo=",
+    "contact": "0525268280",
+    "fullDisk": "Built-in Grilling Station: The focal point of an outdoor kitchen is often a built-in grill, allowing for versatile cooking options and imparting a barbecue ambiance.Countertops and Prep Space: Durable and weather-resistant countertops, often made of materials like granite or stainless steel, provide ample workspace for food preparation and serving.Storage Cabinets: Weatherproof cabinets and storage units offer convenient space for stowing utensils, cookware, and outdoor dining essentials.Outdoor Sink: A sink with running water facilitates easy cleanup and adds to the convenience of outdoor food preparation.Dining Area: An integrated dining space, whether in the form of a bar counter with stools or a full dining table, encourages socializing and enjoying meals in the open air.Shade Structures: Pergolas, umbrellas, or other shade structures help create a comfortable environment, protecting both cooks and guests from the sun during outdoor gatherings."
+  }
+]

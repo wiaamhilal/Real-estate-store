@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "title": "Artist Room",
+    "price": 2200,
+    "description": "Upon entering the artist's room, a burst of colors and inspiration immediately captures your attention. The walls are...",
+    "img-1": "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg",
+    "img-2": "https://images.pexels.com/photos/4348082/pexels-photo-4348082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-3": "https://images.pexels.com/photos/933255/pexels-photo-933255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "contact": "0525268280",
+    "fullDisk": "Upon entering the artist's room, a burst of colors and inspiration immediately captures your attention. The walls are adorned with an eclectic mix of paintings, sketches, and photographs, each telling a unique story. The room itself seems to breathe with creativity, a haven for artistic endeavors."
+  },
+  {
+    "id": "2",
+    "price": 5600,
+    "title": "Study Room",
+    "description": "Upon entering the study room, a sense of purpose and tranquility permeates the air. The room is a dedicated space for...",
+    "img-1": "https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-2": "https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-3": "https://images.pexels.com/photos/2041540/pexels-photo-2041540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "contact": "0525268280",
+    "fullDisk": "Upon entering the study room, a sense of purpose and tranquility permeates the air. The room is a dedicated space for focused learning and intellectual pursuits, carefully designed to inspire concentration and productivity."
+  },
+  {
+    "id": "3",
+    "price": 3500,
+    "title": "Old fusion  room",
+    "description": "Entering the old fusion room is like stepping into a portal that transcends time. The air is thick with nostalgia...",
+    "img-1": "https://images.pexels.com/photos/2079452/pexels-photo-2079452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-2": "https://images.pexels.com/photos/5018261/pexels-photo-5018261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-3": "https://images.pexels.com/photos/8167313/pexels-photo-8167313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "contact": "0525268280",
+    "fullDisk": "Entering the old fusion room is like stepping into a portal that transcends time. The air is thick with nostalgia, and every corner tells a story of a bygone era. This room is a harmonious blend of vintage charm, retro aesthetics, and a touch of modernity, creating a space that defies categorization."
+  },
+  {
+    "id": "4",
+    "price": 4200,
+    "title": "Birthday Room",
+    "description": "Upon entering the room, the air is filled with the sweet aroma of freshly baked birthday cake and the soft hum of...",
+    "img-1": "https://images.pexels.com/photos/750843/pexels-photo-750843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-2": "https://images.pexels.com/photos/903400/pexels-photo-903400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "img-3": "https://images.pexels.com/photos/3394219/pexels-photo-3394219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "contact": "0525268280",
+    "fullDisk": "Upon entering the room, the air is filled with the sweet aroma of freshly baked birthday cake and the soft hum of cheerful background music. The walls are adorned with vibrant and colorful decorations, featuring shimmering banners, cascading streamers, and an array of helium-filled balloons in various shapes and sizes. The room is bathed in a warm, inviting glow from strings of twinkling fairy lights draped strategically around the space."
+  }
+]
