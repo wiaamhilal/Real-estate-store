@@ -129,11 +129,11 @@ const ParamsComp = () => {
               <Details>
                 <h4 className="d-block mt-3">Room Delivery Services :</h4>
                 <p className=" text-color" style={{lineHeight: "1.7"}}>
-                  At [Your Company Name], we pride ourselves on providing
-                  unparalleled convenience with our top-notch room delivery
-                  services. Whether you're moving into a new home, renovating
-                  your existing space, or managing a hospitality business, our
-                  dedicated team ensures a seamless and stress-free experience.
+                  At NPMC, we pride ourselves on providing unparalleled
+                  convenience with our top-notch room delivery services. Whether
+                  you're moving into a new home, renovating your existing space,
+                  or managing a hospitality business, our dedicated team ensures
+                  a seamless and stress-free experience.
                 </p>
                 <h6>Efficient Logistics:</h6>
                 <p
