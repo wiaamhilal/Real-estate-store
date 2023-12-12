@@ -1,19 +1,18 @@
 import React, {useEffect, useState} from "react";
-import {Link, useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 import products1 from "../JsonFiles/Products-1.json";
-import products2 from "../JsonFiles/Products-2.json";
-import {collection, onSnapshot} from "firebase/firestore";
+import {collection, onSnapshot, orderBy, query} from "firebase/firestore";
 import {db} from "../firebase";
-
-const Products = () => {
+import TestLike from "./TestLike";
+const ContactUs = () => {
   const [serch, setSerch] = useState("");
-  const [livingRooms, setlivingRooms] = useState([]);
+  const [posts, setposts] = useState([]);
   useEffect(() => {
     const getRef = collection(db, "products");
     // const orderedRef = query(getRef, orderBy("actor.date", "desc"));
     onSnapshot(getRef, (snapshot) => {
-      setlivingRooms(
+      setposts(
         snapshot.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id,
@@ -45,12 +44,12 @@ const Products = () => {
               Living Rooms:
             </h2>
           )}
-          {livingRooms
+          {posts
             .filter((item) =>
               serch === "" ? item : item.title.toLowerCase().includes(serch)
             )
             .map((item) => (
-              <Link
+              <div
                 to={`/product/${item.id}`}
                 class="card mt-4 border-0 row-md-6 my-shadw my-card"
                 style={{
@@ -62,48 +61,52 @@ const Products = () => {
                 <img src={item["img-1"]} class="card-img-top" alt="..." />
                 <div class="card-body">
                   <h5 class="card-title">{item.title}</h5>
-                  <p class="card-text">{item.description.substring(0, 120)}</p>
+                  <p class="card-text">
+                    {item.description.substring(0, 120)} ...
+                  </p>
                   <Link to="/home" class="btn btn-primary">
                     More Info
                   </Link>
                 </div>
-              </Link>
+                {/* <TestLike likes={item.likes} docId={item.id} />
+                <strong>{item.likes.length || 0}</strong> */}
+              </div>
             ))}
-          {!serch && (
-            <h2
-              className="text-secondary mt-4"
-              style={{
-                marginBottom: "-10px",
-                transform: "translateX(-20px)",
-                width: "100%",
-              }}
-            >
-              Kitchens :
-            </h2>
-          )}
-          {products2
-            .filter((item) =>
-              serch === "" ? item : item.title.toLowerCase().includes(serch)
-            )
-            .map((item) => (
-              <Link
-                to={`/product/${item.id}`}
-                class="card mt-4 border-0 row-md-6 my-shadw my-card"
-                style={{
-                  width: "18rem",
-                  textDecoration: "none",
-                }}
-              >
-                <img src={item["img-1"]} class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">{item.title}</h5>
-                  <p class="card-text">{item.description}</p>
-                  <Link to="/home" class="btn btn-primary">
-                    More Info
-                  </Link>
-                </div>
+          {/* {!serch && (
+        <h2
+          className="text-secondary mt-4"
+          style={{
+            marginBottom: "-10px",
+            transform: "translateX(-20px)",
+            width: "100%",
+          }}
+        >
+          Kitchens :
+        </h2>
+      )}
+      {products2
+        .filter((item) =>
+          serch === "" ? item : item.title.toLowerCase().includes(serch)
+        )
+        .map((item) => (
+          <Link
+            to={`/product/${item.id}`}
+            class="card mt-4 border-0 row-md-6 my-shadw my-card"
+            style={{
+              width: "18rem",
+              textDecoration: "none",
+            }}
+          >
+            <img src={item["img-1"]} class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{item.title}</h5>
+              <p class="card-text">{item.description}</p>
+              <Link to="/home" class="btn btn-primary">
+                More Info
               </Link>
-            ))}
+            </div>
+          </Link>
+        ))} */}
         </Cards>
       </Main>
     </Holder>
@@ -175,4 +178,4 @@ const Cards = styled.div`
   }
 `;
 
-export default Products;
+export default ContactUs;

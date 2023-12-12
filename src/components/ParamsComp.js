@@ -1,16 +1,31 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
-import products1 from "../JsonFiles/Products-1.json";
-import products2 from "../JsonFiles/Products-2.json";
 import styled from "styled-components";
-import normalLike from "../img/like-svgrepo-com (2).svg";
-import normalDislike from "../img/dislike-svgrepo-com (1).svg";
+import {collection, onSnapshot} from "firebase/firestore";
+import LikeComp from "./LikeComp";
+import {db} from "../firebase";
+import {useSelector} from "react-redux";
+import DisLike from "./DisLike";
 const ParamsComp = () => {
+  const [livingRooms, setlivingRooms] = useState([]);
+  const {user} = useSelector((user) => user.UserSlice);
+  console.log(user);
+  useEffect(() => {
+    const getRef = collection(db, "products");
+    // const orderedRef = query(getRef, orderBy("actor.date", "desc"));
+    onSnapshot(getRef, (snapshot) => {
+      setlivingRooms(
+        snapshot.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }))
+      );
+    });
+  }, []);
   const params = useParams();
-
   return (
     <div className="bg-light">
-      {[...products1, ...products2].map(
+      {livingRooms.map(
         (item) =>
           item.id === params.id && (
             <Main className="container">
@@ -100,7 +115,7 @@ const ParamsComp = () => {
                   <h2 className=" text-center d-block text-sm-start">
                     Description
                   </h2>
-                  <span className="text-color">{item.fullDisk}</span>
+                  <span className="text-color">{item.description}</span>
                 </div>
               </Head>
               <div className="d-flex align-items-center justify-content-between mt-3">
@@ -114,16 +129,21 @@ const ParamsComp = () => {
                   className="d-flex justify-content-center"
                   style={{flexDirection: "column"}}
                 >
-                  <img src={normalLike} alt="" />{" "}
-                  <span className="fw-bold text-secondary m-auto mt-1">56</span>
+                  {/* <img src={normalLike} alt="" />{" "} */}
+                  <LikeComp docId={item.id} likes={item.likes} />
+                  <span className="fw-bold text-secondary m-auto mt-1">
+                    {item.likes.length - 1}
+                  </span>
                 </span>
 
                 <span
                   className="d-flex justify-content-center"
                   style={{flexDirection: "column"}}
                 >
-                  <img src={normalDislike} alt="" />
-                  <span className="fw-bold text-secondary m-auto">56</span>
+                  <DisLike docId={item.id} dislikes={item.dislikes} />
+                  <span className="fw-bold text-secondary m-auto">
+                    {item.dislikes.length - 1}
+                  </span>
                 </span>
               </Like>
               <Details>
