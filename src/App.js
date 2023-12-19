@@ -11,7 +11,14 @@ import SignIn from "./components/SignIn";
 import {useDispatch} from "react-redux";
 import {auth} from "./firebase";
 import {setUser} from "./redux/UserSlice";
-
+import Basket from "./components/Basket";
+import CheckOut from "./components/CheckOut";
+export const GetBasketTotal = (basket) => {
+  return basket.reduce((total, current) => {
+    total += current.price;
+    return total;
+  }, 0);
+};
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -65,6 +72,22 @@ function App() {
           }
         />
         <Route path="/signin" element={<SignIn />} />
+        <Route
+          path="/basket"
+          element={
+            <>
+              <Header /> <Basket />
+            </>
+          }
+        />
+        <Route
+          path="/payment"
+          element={
+            <>
+              <Header /> <CheckOut />
+            </>
+          }
+        />
       </Routes>
     </div>
   );

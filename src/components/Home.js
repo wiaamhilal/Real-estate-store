@@ -23,6 +23,98 @@ const Home = () => {
   };
   return (
     <Main>
+      <MySlider>
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                style={{opacity: "0.7"}}
+                src="https://images.pexels.com/photos/3720778/pexels-photo-3720778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                class="d-block w-100 rounded"
+                alt="..."
+              />
+              <div class="carousel-caption d-none">
+                <h5>First slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                style={{opacity: "0.7"}}
+                src="https://images.pexels.com/photos/5824519/pexels-photo-5824519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                class="d-block w-100 rounded"
+                alt="..."
+              />
+              <div class="carousel-caption d-none">
+                <h5>Second slide label</h5>
+                <p>
+                  Some representative placeholder content for the second slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                style={{opacity: "0.7"}}
+                src="https://images.pexels.com/photos/5824908/pexels-photo-5824908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                class="d-block w-100 rounded"
+                alt="..."
+              />
+              <div class="carousel-caption d-none">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </MySlider>
       <p>
         Wellcome {user && <span>{user.displayName}</span>} to our page go ahead
         and see our products
@@ -53,6 +145,17 @@ const Home = () => {
     </Main>
   );
 };
+const MySlider = styled.div`
+  transform: translate(0%, 60%);
+  max-width: 100%;
+  @media (min-width: 767px) {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    max-width: 600px;
+    top: 39%;
+    position: absolute;
+  }
+`;
 const Main = styled.div`
   padding: 0 10px;
   background-image: url("https://images.pexels.com/photos/235986/pexels-photo-235986.jpeg?auto=compress&cs=tinysrgb&w=600");
@@ -67,9 +170,10 @@ const Main = styled.div`
     font-size: 18px;
     line-height: 2;
     color: white;
-    padding-top: 200px;
+    padding-top: 150px;
     @media (min-width: 767px) {
       font-size: 28px;
+      padding-top: 560px;
     }
   }
   & .the-btn {
@@ -81,7 +185,7 @@ const Main = styled.div`
 `;
 const Acount = styled.div`
   position: absolute;
-  bottom: 25px;
+  bottom: 97px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,5 +195,8 @@ const Acount = styled.div`
   opacity: 0.8;
   border-radius: 6px;
   padding: 2px 0 2px 5px;
+  @media (min-width: 767px) {
+    bottom: 10px;
+  }
 `;
 export default Home;

@@ -4,7 +4,7 @@ import {auth, provider} from "../firebase";
 import {signInWithPopup} from "firebase/auth";
 import {useDispatch, useSelector} from "react-redux";
 import {setUser} from "../redux/UserSlice";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 const SignIn = () => {
   const {user} = useSelector((state) => state.UserSlice);
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ const SignIn = () => {
       {user && navicate("/", {replace: true})}
       <BodyPage>
         <LeftSide>
-          <h1>Wellcome to your professional comunety</h1>
+          <h1>Wellcome to your real estate comunety</h1>
           <Botton onClick={GoogleBotton} className="shadow border-0">
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/353/285/original/colourful-google-logo-on-white-background-free-vector.jpg"

@@ -4,12 +4,15 @@ import styled from "styled-components";
 import {collection, onSnapshot} from "firebase/firestore";
 import LikeComp from "./LikeComp";
 import {db} from "../firebase";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import DisLike from "./DisLike";
+import {addItem} from "../redux/UserSlice";
 const ParamsComp = () => {
+  const dispatch = useDispatch();
   const [livingRooms, setlivingRooms] = useState([]);
-  const {user} = useSelector((user) => user.UserSlice);
+  const {user, basket} = useSelector((user) => user.UserSlice);
   console.log(user);
+  console.log(basket);
   useEffect(() => {
     const getRef = collection(db, "products");
     // const orderedRef = query(getRef, orderBy("actor.date", "desc"));
@@ -23,6 +26,7 @@ const ParamsComp = () => {
     });
   }, []);
   const params = useParams();
+  let product;
   return (
     <div className="bg-light">
       {livingRooms.map(
@@ -120,7 +124,19 @@ const ParamsComp = () => {
               </Head>
               <div className="d-flex align-items-center justify-content-between mt-3">
                 <h4 className="mt-3">The price: {item.price} dhr</h4>
-                <button className="btn btn-sm btn-primary rounded-pill">
+                <button
+                  onClick={() =>
+                    dispatch(
+                      addItem({
+                        // img: item["img-1"],
+                        // title: item.title,
+                        // price: item.price,
+                        ...item,
+                      })
+                    )
+                  }
+                  className="btn btn-sm btn-primary rounded-pill"
+                >
                   Add To Card
                 </button>
               </div>

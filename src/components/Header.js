@@ -1,8 +1,10 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import styled from "styled-components";
-
+import cardIcon from "../img/shopping-card-svgrepo-com (1).svg";
+import {useSelector} from "react-redux";
 const Header = () => {
+  const {basket} = useSelector((state) => state.UserSlice);
   return (
     <Holder>
       <Main className="container">
@@ -11,6 +13,13 @@ const Header = () => {
             src="https://st2.depositphotos.com/2723391/10875/v/450/depositphotos_108752618-stock-illustration-capital-letter-n.jpg"
             alt=""
           />
+        </Link>
+        <Link to="/basket" className="basket">
+          {" "}
+          <Basket>
+            <img src={cardIcon} alt="" />
+            <span>{basket?.length}</span>
+          </Basket>
         </Link>
         <Navbar>
           <Link className="link" to="/">
@@ -23,7 +32,7 @@ const Header = () => {
             About
           </Link>
           <Link className="link" to="/contact">
-            Contect us
+            Contect
           </Link>
         </Navbar>
       </Main>
@@ -47,6 +56,28 @@ const Main = styled.div`
     & img {
       width: 62px;
     }
+  }
+  & .basket {
+    margin-right: auto;
+  }
+`;
+const Basket = styled.div`
+  position: relative;
+  & span {
+    position: absolute;
+    bottom: -9px;
+    right: -8px;
+    color: white;
+    background-color: red;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & img {
+    width: 34px;
   }
 `;
 const Navbar = styled.div`
