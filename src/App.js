@@ -13,6 +13,9 @@ import {auth} from "./firebase";
 import {setUser} from "./redux/UserSlice";
 import Basket from "./components/Basket";
 import CheckOut from "./components/CheckOut";
+import Kitchens from "./components/Kitchens";
+import AddProduct from "./components/AddProduct";
+import Messages from "./components/Messages";
 export const GetBasketTotal = (basket) => {
   return basket.reduce((total, current) => {
     total += current.price;
@@ -85,6 +88,22 @@ function App() {
           element={
             <>
               <Header /> <CheckOut />
+            </>
+          }
+        />
+        <Route
+          path="/addproduct"
+          element={
+            <>
+              <Header /> <AddProduct />
+            </>
+          }
+        />
+        <Route
+          path="/messages"
+          element={
+            <>
+              <Header /> <Messages />
             </>
           }
         />

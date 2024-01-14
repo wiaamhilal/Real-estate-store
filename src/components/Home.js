@@ -1,4 +1,3 @@
-import {signOut} from "firebase/auth";
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Link, useNavigate} from "react-router-dom";
@@ -52,48 +51,55 @@ const Home = () => {
             ></button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                style={{opacity: "0.7"}}
-                src="https://images.pexels.com/photos/3720778/pexels-photo-3720778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                class="d-block w-100 rounded"
-                alt="..."
-              />
-              <div class="carousel-caption d-none">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
+            <Link to="/product/fhMKApG0JTTI4YLGng7i">
+              <div class="carousel-item active">
+                <img
+                  style={{opacity: "0.7"}}
+                  src="https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg"
+                  class="d-block w-100 rounded"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none">
+                  <h5>First slide label</h5>
+                  <p>
+                    Some representative placeholder content for the first slide.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                style={{opacity: "0.7"}}
-                src="https://images.pexels.com/photos/5824519/pexels-photo-5824519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                class="d-block w-100 rounded"
-                alt="..."
-              />
-              <div class="carousel-caption d-none">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
+            </Link>
+            <Link to="/product/cSw5wN1g95inzGmAHVGs">
+              <div class="carousel-item">
+                <img
+                  style={{opacity: "0.7"}}
+                  src="https://images.pexels.com/photos/2079452/pexels-photo-2079452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="d-block w-100 rounded"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none">
+                  <h5>Second slide label</h5>
+                  <p>
+                    Some representative placeholder content for the second
+                    slide.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                style={{opacity: "0.7"}}
-                src="https://images.pexels.com/photos/5824908/pexels-photo-5824908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                class="d-block w-100 rounded"
-                alt="..."
-              />
-              <div class="carousel-caption d-none">
-                <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
+            </Link>
+            <Link to="/product/ufnB4NmkwtXaRRrIWoyN">
+              <div class="carousel-item">
+                <img
+                  style={{opacity: "0.7"}}
+                  src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="d-block w-100 rounded"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none">
+                  <h5>Third slide label</h5>
+                  <p>
+                    Some representative placeholder content for the third slide.
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
           <button
             class="carousel-control-prev"
@@ -157,6 +163,11 @@ const MySlider = styled.div`
   }
 `;
 const Main = styled.div`
+  & .carousel-item img {
+    @media (max-width: 767px) {
+      height: 246.66px;
+    }
+  }
   padding: 0 10px;
   background-image: url("https://images.pexels.com/photos/235986/pexels-photo-235986.jpeg?auto=compress&cs=tinysrgb&w=600");
   background-size: cover;

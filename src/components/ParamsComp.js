@@ -69,21 +69,21 @@ const ParamsComp = () => {
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <img
-                          src={item["img-1"]}
+                          src={item.firstImg}
                           class="d-block slide-pic w-100"
                           alt="..."
                         />
                       </div>
                       <div class="carousel-item">
                         <img
-                          src={item["img-2"]}
+                          src={item.secondImg}
                           class="d-block slide-pic w-100"
                           alt="..."
                         />
                       </div>
                       <div class="carousel-item">
                         <img
-                          src={item["img-3"]}
+                          src={item.thirdImg}
                           class="d-block slide-pic w-100"
                           alt="..."
                         />

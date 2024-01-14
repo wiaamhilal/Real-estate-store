@@ -7,13 +7,21 @@ import {deleteItem} from "../redux/UserSlice";
 import {Link} from "react-router-dom";
 import formatCurrency from "./FormatCurrency";
 
-const BasketItem = ({title, img, likes, dislikes, description, price, id}) => {
+const BasketItem = ({
+  title,
+  firstImg,
+  likes,
+  dislikes,
+  description,
+  price,
+  id,
+}) => {
   const dispatch = useDispatch();
   return (
     <div className="position-relative">
       <Link to={`/product/${id}`} style={{textDecoration: "none"}}>
         <Item className="bg-light rounded row position-relative shadow mb-3 mb-md-4">
-          <img className="col-4 rounded" src={img} alt="" />
+          <img className="col-4 rounded" src={firstImg} alt="" />
 
           <div className="position-relative col-8">
             <div className="d-flex align-items-center justify-content-between">

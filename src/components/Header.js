@@ -18,7 +18,7 @@ const Header = () => {
           {" "}
           <Basket>
             <img src={cardIcon} alt="" />
-            <span>{basket?.length}</span>
+            {basket.length ? <span>{basket?.length}</span> : null}
           </Basket>
         </Link>
         <Navbar>

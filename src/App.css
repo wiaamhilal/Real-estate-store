@@ -1,6 +1,6 @@
-/* .my-shadw {
+.my-shadw {
   box-shadow: 12px 12px 10px 1px #808080ad;
-} */
+}
 .text-color {
   color: #666;
 }
@@ -11,4 +11,7 @@
   100% {
     opacity: 1;
   }
+}
+* {
+  overflow-x: unset;
 }

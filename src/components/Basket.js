@@ -25,7 +25,7 @@ const Basket = () => {
               : "Your shoping basket"}
           </h4>
           {basket?.map((item) => (
-            <BasketItem {...item} img={item["img-1"]} />
+            <BasketItem {...item} />
           ))}
         </BasketItems>
         {basket.length && (
