@@ -16,6 +16,7 @@ import CheckOut from "./components/CheckOut";
 import Kitchens from "./components/Kitchens";
 import AddProduct from "./components/AddProduct";
 import Messages from "./components/Messages";
+import Pieces from "./components/Pieces";
 export const GetBasketTotal = (basket) => {
   return basket.reduce((total, current) => {
     total += current.price;
@@ -104,6 +105,14 @@ function App() {
           element={
             <>
               <Header /> <Messages />
+            </>
+          }
+        />
+        <Route
+          path="/pieces/:id"
+          element={
+            <>
+              <Header /> <Pieces />
             </>
           }
         />

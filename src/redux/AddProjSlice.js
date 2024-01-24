@@ -68,7 +68,11 @@ const AddProjSlice = createSlice({
     setLoading: (state, action) => {
       state.loading = action.payload;
     },
+    drowProjucts: (state, action) => {
+      state.projucts = action.payload;
+    },
   },
 });
-export const {setProjucts, setLoading, setcomments} = AddProjSlice.actions;
+export const {setProjucts, setLoading, setcomments, drowProjucts} =
+  AddProjSlice.actions;
 export default AddProjSlice.reducer;

@@ -131,42 +131,122 @@ const AddProduct = () => {
             />
           </div>
           <div className="fw-bold mb-3">The type of projuct : </div>
-          <form className="mb-3 d-flex align-items-center justify-content-between">
-            <div className="d-flex align-items-center">
-              <input
-                type="radio"
-                name="type_rooms"
-                id="living rooms"
-                onChange={(e) => setprojType(e.target.value)}
-                value="living rooms"
-              />
-              <label className="ms-2 fw-bold the-label" for="living rooms">
-                Living Rooms
-              </label>
+          <h6 className="fw-bold">full rooms :</h6>
+          <form>
+            <div className="mb-3 d-flex align-items-center justify-content-between">
+              <div className="d-flex align-items-center">
+                <input
+                  type="radio"
+                  name="type_rooms"
+                  id="living rooms"
+                  onChange={(e) => setprojType(e.target.value)}
+                  value="living rooms"
+                />
+                <label className="ms-2 fw-bold the-label" for="living rooms">
+                  Living Rooms
+                </label>
+              </div>
+              <div className="d-flex align-items-center">
+                <input
+                  name="type_rooms"
+                  type="radio"
+                  id="kitchens"
+                  onChange={(e) => setprojType(e.target.value)}
+                  value="kitchens"
+                />
+                <label className="ms-2 fw-bold the-label" for="kitchens">
+                  Kitchens
+                </label>
+              </div>
+              <div className="d-flex align-items-center">
+                <input
+                  name="type_rooms"
+                  type="radio"
+                  id="outdoor"
+                  onChange={(e) => setprojType(e.target.value)}
+                  value="outdoor"
+                />
+                <label className="ms-2 fw-bold the-label" for="outdoor">
+                  Outdoor
+                </label>
+              </div>
             </div>
-            <div className="d-flex align-items-center">
-              <input
-                name="type_rooms"
-                type="radio"
-                id="kitchens"
-                onChange={(e) => setprojType(e.target.value)}
-                value="kitchens"
-              />
-              <label className="ms-2 fw-bold the-label" for="kitchens">
-                Kitchens
-              </label>
+            <h6 className="fw-bold">separate pieces :</h6>
+            <div className="mb-3 d-flex align-items-center justify-content-between">
+              <div className="d-flex align-items-center">
+                <input
+                  name="type_rooms"
+                  type="radio"
+                  id="chair"
+                  onChange={(e) => setprojType(e.target.value)}
+                  value="chair"
+                />
+                <label className="ms-2 fw-bold the-label" for="chair">
+                  chair
+                </label>
+              </div>
+              <div className="d-flex align-items-center">
+                <input
+                  name="type_rooms"
+                  type="radio"
+                  id="table"
+                  onChange={(e) => setprojType(e.target.value)}
+                  value="table"
+                />
+                <label className="ms-2 fw-bold the-label" for="table">
+                  table
+                </label>
+              </div>
+              <div className="d-flex align-items-center">
+                <input
+                  name="type_rooms"
+                  type="radio"
+                  id="tree"
+                  onChange={(e) => setprojType(e.target.value)}
+                  value="tree"
+                />
+                <label className="ms-2 fw-bold the-label" for="tree">
+                  Chris tree
+                </label>
+              </div>
             </div>
-            <div className="d-flex align-items-center">
-              <input
-                name="type_rooms"
-                type="radio"
-                id="outdoor"
-                onChange={(e) => setprojType(e.target.value)}
-                value="outdoor"
-              />
-              <label className="ms-2 fw-bold the-label" for="outdoor">
-                Outdoor
-              </label>
+            <div className="d-flex align-items-center justify-content-between mb-3">
+              <div className="d-flex align-items-center">
+                <input
+                  name="type_rooms"
+                  type="radio"
+                  id="freezer"
+                  onChange={(e) => setprojType(e.target.value)}
+                  value="freezer"
+                />
+                <label className="ms-2 fw-bold the-label" for="freezer">
+                  freezer
+                </label>
+              </div>
+              <div className="d-flex align-items-center">
+                <input
+                  name="type_rooms"
+                  type="radio"
+                  id="couch"
+                  onChange={(e) => setprojType(e.target.value)}
+                  value="couch"
+                />
+                <label className="ms-2 fw-bold the-label" for="couch">
+                  couch
+                </label>
+              </div>
+              <div className="d-flex align-items-center">
+                <input
+                  name="type_rooms"
+                  type="radio"
+                  id="wardrobe"
+                  onChange={(e) => setprojType(e.target.value)}
+                  value="wardrobe"
+                />
+                <label className="ms-2 fw-bold the-label" for="wardrobe">
+                  wardrobe
+                </label>
+              </div>
             </div>
           </form>
           <input

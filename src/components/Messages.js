@@ -11,10 +11,15 @@ import styled from "styled-components";
 import {db} from "../firebase";
 
 const Messages = () => {
+  const [warning, setwarning] = useState(false);
   const [message, setmessage] = useState([]);
   const DeleteComment = (id) => {
     const collref = doc(db, "comments", id);
     deleteDoc(collref);
+  };
+  const DeleteAll = () => {
+    alert("sory you cant delete all the comments");
+    setwarning(false);
   };
   useEffect(() => {
     const getRef = collection(db, "comments");
@@ -31,6 +36,42 @@ const Messages = () => {
   console.log(message);
   return (
     <Holder>
+      {warning && (
+        <div className="warning-holder">
+          <div className="warning">
+            <p className="text-center fw-bold">
+              Are you sure you want to delete all the comments ?
+            </p>
+            <div className="d-flex justify-content-center">
+              <img
+                style={{width: "20px"}}
+                src="https://uxwing.com/wp-content/themes/uxwing/download/signs-and-symbols/warning-icon.png"
+                alt=""
+              />
+            </div>
+            <div className="d-flex align-items-center justify-content-around">
+              <button
+                className="btn btn-primary rounded-pill"
+                onClick={DeleteAll}
+              >
+                Yes
+              </button>
+              <button
+                className="btn btn-primary rounded-pill"
+                onClick={() => setwarning(false)}
+              >
+                No
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      <button
+        className="btn w-100 btn-danger m-auto rounded-pill mb-3"
+        onClick={() => setwarning(true)}
+      >
+        Clear All
+      </button>
       {message.map((item) => (
         <Main className="container mb-3" style={{position: "relative"}}>
           <div className="d-flex align-items-center  ">
@@ -49,7 +90,7 @@ const Messages = () => {
           <button
             onClick={() => DeleteComment(item.id)}
             className="btn btn-sm btn-danger"
-            style={{right: "10px", bottom: "10px", position: "absolute"}}
+            style={{right: "10px", top: "10px", position: "absolute"}}
           >
             Delete
           </button>
@@ -70,5 +111,11 @@ const Main = styled.div`
   background-color: #80808038;
   border-radius: 15px;
   padding: 10px;
+  & p {
+    background-color: #eeeeee9e;
+    padding: 3px;
+    border-radius: 6px;
+    margin-top: 5px;
+  }
 `;
 export default Messages;

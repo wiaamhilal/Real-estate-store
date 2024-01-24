@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import styled from "styled-components";
 import {collection, onSnapshot} from "firebase/firestore";
 import LikeComp from "./LikeComp";
@@ -7,21 +7,25 @@ import {db} from "../firebase";
 import {useDispatch, useSelector} from "react-redux";
 import DisLike from "./DisLike";
 import {addItem} from "../redux/UserSlice";
+import {drowProjucts} from "../redux/AddProjSlice";
 const ParamsComp = () => {
   const dispatch = useDispatch();
-  const [livingRooms, setlivingRooms] = useState([]);
+  // const [allProduts, setallProduts] = useState([]);
   const {user, basket} = useSelector((user) => user.UserSlice);
+  const {projucts} = useSelector((state) => state.AddProjSlice);
   console.log(user);
   console.log(basket);
   useEffect(() => {
     const getRef = collection(db, "products");
     // const orderedRef = query(getRef, orderBy("actor.date", "desc"));
     onSnapshot(getRef, (snapshot) => {
-      setlivingRooms(
-        snapshot.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }))
+      dispatch(
+        drowProjucts(
+          snapshot.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }))
+        )
       );
     });
   }, []);
@@ -29,7 +33,7 @@ const ParamsComp = () => {
   let product;
   return (
     <div className="bg-light">
-      {livingRooms.map(
+      {projucts.map(
         (item) =>
           item.id === params.id && (
             <Main className="container">
@@ -162,6 +166,116 @@ const ParamsComp = () => {
                   </span>
                 </span>
               </Like>
+              <CardHolder className="row">
+                <Link
+                  to="/pieces/chair"
+                  class="card my-shadw border-0 col-6 col-sm-4 col-md-3 m-auto card-item mb-3"
+                  style={{padding: "0", textDecoration: "none"}}
+                >
+                  <img
+                    src="https://images.pexels.com/photos/6344440/pexels-photo-6344440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold">Chairs</h6>
+                    <p class="card-text">
+                      Chairs are furniture designed for sitting, typically
+                      consisting of a seat, backrest
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  to="/pieces/table"
+                  class="card my-shadw border-0 col-6 col-sm-4 col-md-3 m-auto card-item mb-3"
+                  style={{padding: "0", textDecoration: "none"}}
+                >
+                  <img
+                    src="https://images.pexels.com/photos/2097118/pexels-photo-2097118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold">Tables</h6>
+                    <p class="card-text">
+                      Tables are flat surfaces supported by legs or a base,
+                      providing a stable platform for...
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  to="/pieces/freezer"
+                  class="card my-shadw border-0 col-6 col-sm-4 col-md-3 m-auto card-item mb-3"
+                  style={{padding: "0", textDecoration: "none"}}
+                >
+                  <img
+                    src="https://assets.teenvogue.com/photos/64ecb6225f93d6e6cc9ea03e/4:3/w_1200,h_900,c_limit/Comm_BestFridges_Aug2023_PROMO.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold">Freezers</h6>
+                    <p class="card-text">
+                      Explore cutting-edge technologies that enhance efficiency,
+                      such as adjustable temperature controls
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  to="/pieces/couch"
+                  class="card my-shadw border-0 col-6 col-sm-4 col-md-3 m-auto card-item mb-3"
+                  style={{padding: "0", textDecoration: "none"}}
+                >
+                  <img
+                    src="https://images.pexels.com/photos/9760216/pexels-photo-9760216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold">Couches</h6>
+                    <p class="card-text">
+                      Indulge in the epitome of elegance and sophistication with
+                      our carefully selected coach designs
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  to="/pieces/wardrobe"
+                  class="card my-shadw border-0 col-6 col-sm-4 col-md-3 m-auto card-item mb-3"
+                  style={{padding: "0", textDecoration: "none"}}
+                >
+                  <img
+                    src="https://brandsourcett.com/wp-content/uploads/2023/11/7468224152_1-300x300.webp"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold">Wardrobes</h6>
+                    <p class="card-text">
+                      Discover a diverse range of wardrobe styles, from modern
+                      and minimalist to classic and timeless designs
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  to="/pieces/tree"
+                  class="card my-shadw border-0 col-6 col-sm-4 col-md-3 m-auto card-item mb-3"
+                  style={{padding: "0", textDecoration: "none"}}
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNC00nKCi3MPaApNfhoEl5MA_e2448HKY4Fw&usqp=CAU"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold">Christmas trees</h6>
+                    <p class="card-text">
+                      Choose from a variety of sizes, styles, and colors to
+                      match your unique holiday decor theme
+                    </p>
+                  </div>
+                </Link>
+              </CardHolder>
               <Details>
                 <h4 className="d-block mt-3">Room Delivery Services :</h4>
                 <p className=" text-color" style={{lineHeight: "1.7"}}>
@@ -310,4 +424,19 @@ const Comments = styled.div`
   }
 `;
 const Details = styled.div``;
+const CardHolder = styled.div`
+  & .card-item {
+    width: 16rem;
+    @media (max-width: 767px) {
+      font-size: 12px;
+      width: 45%;
+    }
+    img {
+      height: 170px;
+      @media (max-width: 767px) {
+        height: 120px;
+      }
+    }
+  }
+`;
 export default ParamsComp;
