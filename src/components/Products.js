@@ -71,6 +71,36 @@ const Products = () => {
             </button>
           </div>
         </nav>
+        <div>
+          <div className="d-flex align-items-center justify-content-center mt-3">
+            <Link to="/pieces/chair" className="btn btn-sm btn-secondary me-1">
+              Chairs
+            </Link>
+            <Link to="/pieces/table" className="btn btn-sm btn-secondary me-1">
+              Tables
+            </Link>
+            <Link
+              to="/pieces/freezer"
+              className="btn btn-sm btn-secondary me-1"
+            >
+              Freezers
+            </Link>
+          </div>
+          <div className="d-flex align-items-center justify-content-center mt-3">
+            <Link to="/pieces/couch" className="btn btn-sm btn-secondary me-1">
+              Couches
+            </Link>
+            <Link
+              to="/pieces/wardrobe"
+              className="btn btn-sm btn-secondary me-1"
+            >
+              Wardrobes
+            </Link>
+            <Link to="/pieces/tree" className="btn btn-sm btn-secondary me-1">
+              Christmas Trees
+            </Link>
+          </div>
+        </div>
         <div class="tab-content" id="nav-tabContent">
           <Search className="mt-3">
             <form className="shadow">
@@ -240,7 +270,7 @@ const Cards = styled.div`
 `;
 const Kitchen = styled.div`
   position: absolute;
-  top: 172px;
+  top: 272px;
   width: fit-content;
   left: 50%;
   transform: translateX(-50%);
@@ -275,7 +305,7 @@ const Kitchen = styled.div`
 `;
 const OutDoors = styled.div`
   position: absolute;
-  top: 172px;
+  top: 272px;
   width: fit-content;
   left: 50%;
   transform: translateX(-50%);

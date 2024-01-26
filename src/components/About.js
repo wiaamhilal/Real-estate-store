@@ -81,6 +81,7 @@ const Holder = styled.div`
   background-image: url("https://images.unsplash.com/photo-1615799998603-7c6270a45196?q=80&w=1604&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: contain;
   padding-bottom: 5px;
+  min-height: 100vh;
 `;
 const Main = styled.div`
   padding-top: 80px;

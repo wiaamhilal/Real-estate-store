@@ -181,7 +181,7 @@ const ParamsComp = () => {
                     <h6 class="card-title fw-bold">Chairs</h6>
                     <p class="card-text">
                       Chairs are furniture designed for sitting, typically
-                      consisting of a seat, backrest
+                      consisting of a seat, backrest some items....{" "}
                     </p>
                   </div>
                 </Link>
@@ -199,7 +199,7 @@ const ParamsComp = () => {
                     <h6 class="card-title fw-bold">Tables</h6>
                     <p class="card-text">
                       Tables are flat surfaces supported by legs or a base,
-                      providing a stable platform for...
+                      providing a stable platform for..
                     </p>
                   </div>
                 </Link>
@@ -253,7 +253,7 @@ const ParamsComp = () => {
                     <h6 class="card-title fw-bold">Wardrobes</h6>
                     <p class="card-text">
                       Discover a diverse range of wardrobe styles, from modern
-                      and minimalist to classic and timeless designs
+                      and minimalist to classic and..
                     </p>
                   </div>
                 </Link>
