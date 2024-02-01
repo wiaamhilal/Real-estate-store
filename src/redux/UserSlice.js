@@ -5,6 +5,7 @@ const UserSlice = createSlice({
   initialState: {
     user: null,
     basket: [],
+    loading: false,
   },
   reducers: {
     setUser: (state, action) => {
@@ -23,7 +24,10 @@ const UserSlice = createSlice({
       }
       state.basket = newbasket;
     },
+    setloading: (state, action) => {
+      state.loading = action.payload;
+    },
   },
 });
-export const {setUser, addItem, deleteItem} = UserSlice.actions;
+export const {setUser, addItem, deleteItem, setloading} = UserSlice.actions;
 export default UserSlice.reducer;

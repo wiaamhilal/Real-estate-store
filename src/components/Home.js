@@ -157,8 +157,8 @@ const MySlider = styled.div`
   @media (min-width: 767px) {
     transform: translate(-50%, -50%);
     left: 50%;
-    max-width: 600px;
-    top: 39%;
+    max-width: 500px;
+    top: 45%;
     position: absolute;
   }
 `;
