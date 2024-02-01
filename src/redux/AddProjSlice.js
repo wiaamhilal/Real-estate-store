@@ -11,6 +11,7 @@ const AddProjSlice = createSlice({
   },
   reducers: {
     setProjucts: (state, action) => {
+      state.loading = true;
       const collStorage = ref(storage, `images/${action.payload.picture.name}`);
       const uploadStorage = uploadBytesResumable(
         collStorage,
@@ -52,6 +53,7 @@ const AddProjSlice = createSlice({
                 "https://cdn-icons-png.flaticon.com/512/4211/4211763.png",
             });
           });
+          state.loading = false;
         }
       );
     },

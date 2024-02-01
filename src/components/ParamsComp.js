@@ -6,8 +6,8 @@ import LikeComp from "./LikeComp";
 import {db, storage} from "../firebase";
 import {useDispatch, useSelector} from "react-redux";
 import DisLike from "./DisLike";
-import {addItem, setloading} from "../redux/UserSlice";
-import {drowProjucts} from "../redux/AddProjSlice";
+import {addItem} from "../redux/UserSlice";
+import {drowProjucts, setLoading} from "../redux/AddProjSlice";
 import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
 const ParamsComp = () => {
   const dispatch = useDispatch();
@@ -42,7 +42,7 @@ const ParamsComp = () => {
     }
   };
   const chamgepic1 = (id) => {
-    dispatch(setloading(true));
+    dispatch(setLoading(true));
     const collStorage = ref(storage, `images/${img.name}`);
     const uploadStorage = uploadBytesResumable(collStorage, img);
     uploadStorage.on(
@@ -63,7 +63,7 @@ const ParamsComp = () => {
             firstImg: downloadURL,
           });
         });
-        dispatch(setloading(false));
+        dispatch(setLoading(false));
       }
     );
     settoggle(false);

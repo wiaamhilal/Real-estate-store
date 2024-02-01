@@ -18,6 +18,7 @@ import AddProduct from "./components/AddProduct";
 import Messages from "./components/Messages";
 import Pieces from "./components/Pieces";
 import styled from "styled-components";
+import loadingImg from "./img/loader.svg";
 export const GetBasketTotal = (basket) => {
   return basket.reduce((total, current) => {
     total += current.price;
@@ -33,12 +34,14 @@ function App() {
       }
     });
   }, []);
-  const {loading} = useSelector((state) => state.UserSlice);
+  const {loading} = useSelector((state) => state.AddProjSlice);
   return (
     <div className="App position-relative">
       {loading ? (
         <Holder>
-          <Main>loading...</Main>
+          <Main>
+            <img style={{width: "150px"}} src={loadingImg} alt="" />
+          </Main>
         </Holder>
       ) : (
         <Routes>
@@ -132,7 +135,7 @@ const Holder = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #00000052;
+  background-color: rgba(0, 0, 0, 0.788);
   min-height: 100vh;
 `;
 const Main = styled.div`
