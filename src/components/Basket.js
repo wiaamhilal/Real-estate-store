@@ -25,7 +25,7 @@ const Basket = () => {
               : "Your shoping basket"}
           </h4>
           {basket?.map((item) => (
-            <BasketItem {...item} />
+            <BasketItem showbutton {...item} />
           ))}
         </BasketItems>
         {basket.length && (
@@ -59,7 +59,9 @@ const Basket = () => {
             </form>
             <button
               className="btn btn-secondary w-100 mt-3"
-              onClick={() => navicate("/payment")}
+              onClick={() =>
+                user ? navicate("/location") : navicate("/signin")
+              }
             >
               Proceed to checkout
             </button>

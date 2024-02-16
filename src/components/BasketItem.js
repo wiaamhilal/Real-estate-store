@@ -15,6 +15,7 @@ const BasketItem = ({
   description,
   price,
   id,
+  showbutton,
 }) => {
   const dispatch = useDispatch();
   return (
@@ -50,13 +51,15 @@ const BasketItem = ({
           </div>
         </Item>
       </Link>
-      <button
-        onClick={() => dispatch(deleteItem(id))}
-        className="btn btn-sm btn-danger position-absolute"
-        style={{bottom: "5px", right: "0px", width: "fit-content"}}
-      >
-        delete
-      </button>
+      {showbutton && (
+        <button
+          onClick={() => dispatch(deleteItem(id))}
+          className="btn btn-sm btn-danger position-absolute"
+          style={{bottom: "5px", right: "0px", width: "fit-content"}}
+        >
+          delete
+        </button>
+      )}
     </div>
   );
 };

@@ -12,13 +12,16 @@ import {useDispatch, useSelector} from "react-redux";
 import {auth} from "./firebase";
 import {setUser} from "./redux/UserSlice";
 import Basket from "./components/Basket";
-import CheckOut from "./components/CheckOut";
+import CheckOut from "./components/LocationPage";
 import Kitchens from "./components/Kitchens";
 import AddProduct from "./components/AddProduct";
 import Messages from "./components/Messages";
 import Pieces from "./components/Pieces";
 import styled from "styled-components";
 import loadingImg from "./img/loader.svg";
+import LocationPage from "./components/LocationPage";
+import Payment from "./components/Payment";
+import Orders from "./components/Orders";
 export const GetBasketTotal = (basket) => {
   return basket.reduce((total, current) => {
     total += current.price;
@@ -95,10 +98,10 @@ function App() {
             }
           />
           <Route
-            path="/payment"
+            path="/location"
             element={
               <>
-                <Header /> <CheckOut />
+                <Header /> <LocationPage />
               </>
             }
           />
@@ -123,6 +126,22 @@ function App() {
             element={
               <>
                 <Header /> <Pieces />
+              </>
+            }
+          />
+          <Route
+            path="payment"
+            element={
+              <>
+                <Header /> <Payment />
+              </>
+            }
+          />
+          <Route
+            path="orders"
+            element={
+              <>
+                <Header /> <Orders />
               </>
             }
           />
